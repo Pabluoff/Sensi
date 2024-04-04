@@ -13,6 +13,11 @@ Array.from(document.querySelectorAll('.header__menu a')).forEach(menuLink => {
 
 document.addEventListener('DOMContentLoaded', function () {
     var video = document.getElementById('custom-video');
+    var canvas = document.createElement('canvas');
+    var context = canvas.getContext('2d');
+    var thumbnailContainer = document.getElementById('thumbnail-container');
+    var thumbnail = document.getElementById('thumbnail');
+    var thumbSecond = 5; // Defina o segundo desejado para a thumbnail
     var playButton = document.getElementById('play-button');
 
     // Função para iniciar ou pausar o vídeo quando o botão de reprodução for clicado
@@ -39,26 +44,25 @@ document.addEventListener('DOMContentLoaded', function () {
     video.addEventListener('pause', function () {
         playButton.style.display = 'block'; // Exibe o botão de reprodução quando o vídeo está pausado
     });
-});
 
-
-// Captura um frame em um segundo específico do vídeo e define como a poster
-document.addEventListener('DOMContentLoaded', function () {
-    var video = document.getElementById('custom-video');
-    var canvas = document.createElement('canvas');
-    var context = canvas.getContext('2d');
-    var targetSecond = 1; // Segundo desejado
-
-    video.addEventListener('canplaythrough', function () {
-        video.currentTime = targetSecond; // Avança para o segundo desejado
-    });
-
-    video.addEventListener('seeked', function () {
+    // Evento de carregamento de dados do vídeo
+    video.addEventListener('loadeddata', function () {
         canvas.width = video.videoWidth;
         canvas.height = video.videoHeight;
-        context.drawImage(video, 0, 0, canvas.width, canvas.height);
-        var posterURL = canvas.toDataURL('image/jpeg');
-        video.setAttribute('poster', posterURL);
+        video.currentTime = thumbSecond; // Define o segundo desejado do vídeo
+        setTimeout(function () {
+            context.drawImage(video, 0, 0, canvas.width, canvas.height);
+            var thumbnailURL = canvas.toDataURL('image/jpeg');
+            thumbnail.src = thumbnailURL;
+            video.currentTime = 0; // Volta o vídeo para o início
+        }, 200); // Aguarda 200ms para garantir que o vídeo tenha carregado e mudado para o segundo desejado
+    });
+
+    // Evento de clique na thumbnail para reproduzir o vídeo
+    thumbnail.addEventListener('click', function () {
+        video.play();
+        thumbnail.style.display = 'none'; // Oculta a thumbnail quando o vídeo é reproduzido
+        playButton.style.display = 'none'; // Oculta o botão de reprodução quando o vídeo é reproduzido
     });
 
     video.src = 'img/VSL-IGaming.mp4';
