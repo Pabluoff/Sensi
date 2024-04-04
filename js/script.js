@@ -40,3 +40,13 @@ document.addEventListener('DOMContentLoaded', function () {
         playButton.style.display = 'block'; // Exibe o botão de reprodução quando o vídeo está pausado
     });
 });
+
+
+// Verifica se o dispositivo é um iPhone ou iPad
+const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+// Inicia a reprodução do vídeo automaticamente no iOS
+if (isIOS) {
+    const video = document.getElementById('custom-video');
+    video.play();
+}
