@@ -42,13 +42,14 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+// Captura um frame em um segundo específico do vídeo e define como a poster
 document.addEventListener('DOMContentLoaded', function () {
     var video = document.getElementById('custom-video');
     var canvas = document.createElement('canvas');
     var context = canvas.getContext('2d');
     var targetSecond = 1; // Segundo desejado
 
-    video.addEventListener('loadedmetadata', function () {
+    video.addEventListener('canplaythrough', function () {
         video.currentTime = targetSecond; // Avança para o segundo desejado
     });
 
