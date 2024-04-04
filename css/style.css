@@ -529,8 +529,13 @@ body {
     padding-top: 56.25%;
     overflow: hidden;
     border-radius: 5px;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
+    transition: box-shadow 0.3s ease;
 }
 
+.custom-video-player:hover {
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.5);
+}
 
 .custom-video-player video {
     position: absolute;
