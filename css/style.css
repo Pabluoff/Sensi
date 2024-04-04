@@ -1,3 +1,5 @@
+/*Style*/
+
 * {
     margin: 0;
     padding: 0;
@@ -36,6 +38,59 @@ body {
     background-color: #000;
 }
 
+
+.overflow-y-hidden {
+    overflow-y: hidden;
+}
+
+.gradient {
+    background: linear-gradient(95.27deg, #6bd2ff -0.85%, #a4e8ff 39.07%, #81d9ff 89.32%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+.title-section {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.title-section,
+.title,
+.subtitle {
+    font-family: "Poppins", sans-serif;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 5.6rem;
+    color: #fff;
+    line-height: 1.2em;
+}
+
+@media (max-width: 991.98px) {
+    .title {
+        font-size: 3.2rem;
+        line-height: 120%;
+    }
+}
+
+.subtitle {
+    font-size: 1.8rem;
+    line-height: 150%;
+    font-weight: 500;
+    color: #fff;
+}
+
+@media (max-width: 991.98px) {
+    .subtitle {
+        font-size: 1.6rem;
+    }
+}
+
+/*line*/
+
 .line-01 {
     display: inline-block;
     height: 100%;
@@ -56,10 +111,7 @@ body {
     }
 }
 
-
-.overflow-y-hidden {
-    overflow-y: hidden;
-}
+/*navbar*/
 
 .header {
     position: absolute;
@@ -299,6 +351,7 @@ body {
     top: 0.95rem;
 }
 
+/*home*/
 
 .container {
     padding-left: 5.3rem;
@@ -477,7 +530,7 @@ body {
     }
 }
 
-
+/*VSL*/
 
 
 .lobby__video-container {
@@ -546,3 +599,6 @@ body {
     object-fit: cover;
     border-radius: inherit;
 }
+
+/*Como funciona*/
+
