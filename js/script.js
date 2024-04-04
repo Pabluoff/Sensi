@@ -13,20 +13,26 @@ Array.from(document.querySelectorAll('.header__menu a')).forEach(menuLink => {
 
 document.addEventListener('DOMContentLoaded', function () {
     var video = document.getElementById('custom-video');
-    var canvas = document.createElement('canvas');
-    var context = canvas.getContext('2d');
-    var thumbnailContainer = document.getElementById('thumbnail-container');
-    var thumbnail = document.getElementById('thumbnail');
-    var thumbSecond = 5; // Defina o segundo desejado para a thumbnail
     var playButton = document.getElementById('play-button');
+    var soundIcon = document.getElementById('sound-icon');
+    var isFirstPlay = true;
 
     // Função para iniciar ou pausar o vídeo quando o botão de reprodução for clicado
     function togglePlayPause() {
-        if (video.paused) {
+        if (isFirstPlay) {
+            video.currentTime = 0; // Reinicia o vídeo para o início
             video.play();
+            video.muted = false; // Desmuta o vídeo
             playButton.style.display = 'none'; // Oculta o botão de reprodução quando o vídeo está sendo reproduzido
+            soundIcon.style.display = 'none'; // Oculta o ícone de som silenciado e o texto
+            isFirstPlay = false;
         } else {
-            video.pause();
+            if (video.paused) {
+                video.play();
+                playButton.style.display = 'none'; // Oculta o botão de reprodução quando o vídeo está sendo reproduzido
+            } else {
+                video.pause();
+            }
         }
     }
 
@@ -45,25 +51,29 @@ document.addEventListener('DOMContentLoaded', function () {
         playButton.style.display = 'block'; // Exibe o botão de reprodução quando o vídeo está pausado
     });
 
-    // Evento de carregamento de dados do vídeo
-    video.addEventListener('loadeddata', function () {
-        canvas.width = video.videoWidth;
-        canvas.height = video.videoHeight;
-        video.currentTime = thumbSecond; // Define o segundo desejado do vídeo
-        setTimeout(function () {
-            context.drawImage(video, 0, 0, canvas.width, canvas.height);
-            var thumbnailURL = canvas.toDataURL('image/jpeg');
-            thumbnail.src = thumbnailURL;
-            video.currentTime = 0; // Volta o vídeo para o início
-        }, 200); // Aguarda 200ms para garantir que o vídeo tenha carregado e mudado para o segundo desejado
+
+    // Evento para exibir o ícone de som silenciado e o texto antes do primeiro clique
+    playButton.addEventListener('mouseover', function () {
+        if (isFirstPlay) {
+            soundIcon.style.display = 'block';
+        }
     });
 
-    // Evento de clique na thumbnail para reproduzir o vídeo
-    thumbnail.addEventListener('click', function () {
-        video.play();
-        thumbnail.style.display = 'none'; // Oculta a thumbnail quando o vídeo é reproduzido
-        playButton.style.display = 'none'; // Oculta o botão de reprodução quando o vídeo é reproduzido
+    // Evento para ocultar o ícone de som silenciado e o texto após o primeiro clique
+    playButton.addEventListener('mouseout', function () {
+        if (isFirstPlay) {
+            soundIcon.style.display = 'none';
+        }
     });
 
-    video.src = 'img/VSL-IGaming.mp4';
+    // Evento de clique no ícone de som
+    soundIcon.addEventListener('click', function () {
+        video.muted = !video.muted; // Alterna o estado de mudo do vídeo
+        if (!video.muted) {
+            video.currentTime = 0; // Reinicia o vídeo para o início
+            video.play();
+            soundIcon.style.display = 'none'; // Oculta o ícone de som silenciado e o texto
+            isFirstPlay = false;
+        }
+    });
 });
