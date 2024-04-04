@@ -42,11 +42,23 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// Verifica se o dispositivo é um iPhone ou iPad
-const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+document.addEventListener('DOMContentLoaded', function () {
+    var video = document.getElementById('custom-video');
+    var canvas = document.createElement('canvas');
+    var context = canvas.getContext('2d');
+    var targetSecond = 1; // Segundo desejado
 
-// Inicia a reprodução do vídeo automaticamente no iOS
-if (isIOS) {
-    const video = document.getElementById('custom-video');
-    video.play();
-}
+    video.addEventListener('loadedmetadata', function () {
+        video.currentTime = targetSecond; // Avança para o segundo desejado
+    });
+
+    video.addEventListener('seeked', function () {
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+        context.drawImage(video, 0, 0, canvas.width, canvas.height);
+        var posterURL = canvas.toDataURL('image/jpeg');
+        video.setAttribute('poster', posterURL);
+    });
+
+    video.src = 'img/VSL-IGaming.mp4';
+});
