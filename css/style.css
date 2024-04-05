@@ -184,7 +184,7 @@ body {
 .logo__main {
     font-weight: lighter;
     font-family: 'poppins', cursive;
-    font-style: italic;
+    font-style: oblique;
 }
 
 .logo__sub {
