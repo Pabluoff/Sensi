@@ -170,7 +170,6 @@ body {
 
 .header__logo {
     font-family: 'poppins', cursive;
-    margin-right: 9.7rem;
     font-weight: 500;
     font-size: 2.4rem;
     line-height: 0.9;
@@ -179,16 +178,19 @@ body {
     opacity: 1;
     transition: opacity 0.3s;
     display: inline-block;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .logo__main {
     font-weight: bold;
     font-family: 'poppins', cursive;
     font-style: oblique;
+    font-size: 3rem;
 }
 
 .logo__sub {
-    font-size: 3.0rem;
+    font-size: 2.5rem;
     font-family: 'Mystique', sans-serif;
     font-weight: lighter;
 }
@@ -467,7 +469,7 @@ body {
 
 @media (max-width: 767.98px) {
     .home {
-        background-image: url(/img/bg-mob-green.JPEG);
+        background-image: url(/img/bg-mob-green3.JPG);
     }
 }
 
