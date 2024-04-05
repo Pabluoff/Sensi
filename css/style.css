@@ -44,7 +44,10 @@ body {
 }
 
 .gradient {
-    background: linear-gradient(95.27deg, #6bd2ff -0.85%, #a4e8ff 39.07%, #81d9ff 89.32%);
+    background: linear-gradient(95.27deg,
+            #1cd8b6 -0.85%,
+            #4df1b5 39.07%,
+            #39f18e 89.32%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -207,7 +210,10 @@ body {
         top: 12.5rem;
         height: 178px;
         width: 2px;
-        background: linear-gradient(95.27deg, #6bd2ff -0.85%, #a4e8ff 39.07%, #81d9ff 89.32%);
+        background: linear-gradient(95.27deg,
+                #1cd8b6 -0.85%,
+                #4df1b5 39.07%,
+                #39f18e 89.32%);
     }
 }
 
@@ -293,7 +299,10 @@ body {
     justify-content: center;
     height: 100%;
     width: 5.4rem;
-    background: linear-gradient(95.27deg, #6bd2ff -0.85%, #4de3f1 39.07%, #39ccf1 89.32%);
+    background: linear-gradient(95.27deg,
+            #1cd8b6 -0.85%,
+            #4df1b5 39.07%,
+            #39f18e 89.32%);
     cursor: pointer;
 }
 
@@ -366,7 +375,10 @@ body {
     max-width: 34.2rem;
     width: 100%;
     padding: 1rem 0;
-    background: linear-gradient(95.27deg, #6bd2ff -0.85%, #4de3f1 39.07%, #39ccf1 89.32%);
+    background: linear-gradient(95.27deg,
+            #1cd8b6 -0.85%,
+            #4df1b5 39.07%,
+            #39f18e 89.32%);
     cursor: pointer;
     font-size: 1.4rem;
     font-weight: 600;
@@ -396,7 +408,7 @@ body {
 
 @media (max-width: 767.98px) {
     .home {
-        background-image: url(/img/test.png);
+        background-image: url(/img/bg-mob-green.JPEG);
     }
 }
 
@@ -464,7 +476,10 @@ body {
     z-index: 100;
     width: 2px;
     height: 17.6rem;
-    background: linear-gradient(95.27deg, #6bd2ff -0.85%, #a4e8ff 39.07%, #81d9ff 89.32%);
+    background: linear-gradient(95.27deg,
+            #1cd8b6 -0.85%,
+            #4df1b5 39.07%,
+            #39f18e 89.32%);
 }
 
 @media (max-width: 991.98px) {
