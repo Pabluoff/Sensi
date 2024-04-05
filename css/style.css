@@ -289,7 +289,7 @@ body {
 }
 
 .header__menu li a:hover {
-    color: #a4e8ff;
+    color: #0ee37d;
 }
 
 .header__btn {
@@ -534,7 +534,7 @@ body {
 
 .arrow i {
     font-size: 2.5rem;
-    color: #6bd2ff;
+    color: #0ee37d;
 }
 
 @keyframes fade_move_down {
@@ -630,21 +630,27 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.681);
     color: white;
+    border: solid 2px #4df1916e;
     padding: 10px;
     border-radius: 5px;
     font-size: 14px;
     text-align: center;
     cursor: pointer;
+    transition: all 0.4s ease;
 }
 
 #sound-icon i {
-    margin-right: 5px;
+    margin-right: 3px;
 }
 
 #sound-icon span {
     vertical-align: middle;
+}
+
+#sound-icon:hover {
+    background-color: #000;
 }
 
 /*Como funciona*/
