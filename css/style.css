@@ -693,12 +693,12 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.681);
+    background-color: rgba(0, 0, 0, 0.726);
     color: white;
-    border: solid 2px #4df1916e;
-    padding: 10px;
+    border: solid 2px #7a7a7a49;
+    padding: 14px;
     border-radius: 5px;
-    font-size: 14px;
+    font-size: 15px;
     text-align: center;
     cursor: pointer;
     transition: all 0.4s ease;
@@ -713,7 +713,7 @@ body {
 }
 
 #sound-icon:hover {
-    background-color: #000;
+    background-color: #000000;
 }
 
 /*Como funciona*/
