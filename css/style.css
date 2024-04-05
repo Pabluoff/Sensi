@@ -165,11 +165,13 @@ body {
 }
 
 .logo__main {
-    font-weight: 600;
+    font-weight: lighter;
+    font-family: 'sans-serif', cursive;
 }
 
 .logo__sub {
     font-size: 2.0rem;
+    font-family: 'mystique', cursive;
 }
 
 @media (max-width: 991.98px) {
