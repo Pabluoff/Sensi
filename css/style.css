@@ -190,6 +190,7 @@ body {
 .logo__sub {
     font-size: 3.0rem;
     font-family: 'Mystique', sans-serif;
+    font-weight: lighter;
 }
 
 @media (max-width: 991.98px) {
