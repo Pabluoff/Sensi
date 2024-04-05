@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'Mystique';
+    src: url('/fonts/Mystique-Regular.otf') format('opentype');
+
+}
+
 /*Style*/
 
 * {
@@ -58,7 +64,7 @@ body {
     background: linear-gradient(95.27deg,
             #e6e6e6 -0.85%,
             #ffffff 39.07%,
-            #d1d1d1 89.32%);
+            #ffffff 89.32%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -167,7 +173,7 @@ body {
     margin-right: 9.7rem;
     font-weight: 500;
     font-size: 2.4rem;
-    line-height: 0.8;
+    line-height: 0.7;
     color: #fff;
     text-decoration: none;
     opacity: 1;
@@ -178,12 +184,12 @@ body {
 .logo__main {
     font-weight: lighter;
     font-family: 'poppins', cursive;
+    font-style: italic;
 }
 
 .logo__sub {
-    font-size: 3.4rem;
-    font-family: 'Mystique', cursive;
-    font-weight: 300;
+    font-size: 3.0rem;
+    font-family: 'Mystique', sans-serif;
 }
 
 @media (max-width: 991.98px) {
