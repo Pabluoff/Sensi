@@ -411,7 +411,7 @@ body {
 
 .button {
     position: relative;
-    display: inline-block;
+    display: block;
     max-width: 34.2rem;
     width: 100%;
     padding: 1rem 0;
@@ -492,7 +492,7 @@ body {
 
 .lobby__wrapper {
     padding-top: 16.6rem;
-    padding: 23rem 0 12rem 1.5rem;
+    padding: 23rem 0 12rem 0;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -503,6 +503,13 @@ body {
     .lobby__wrapper {
         padding: 10rem 0 3.4rem 1.5rem;
         display: block;
+        text-align: center;
+    }
+
+    .mob-btn {
+        display: inline-block;
+        margin: auto;
+        margin-top: 2rem;
     }
 }
 
@@ -512,16 +519,6 @@ body {
     }
 }
 
-@media (max-width: 767.98px) {
-    .lobby__wrapper {
-        justify-content: center;
-        text-align: center;
-    }
-
-    .mob-btn {
-        margin-top: 2rem;
-    }
-}
 
 .lobby__title {
     max-width: 46rem;
@@ -797,21 +794,6 @@ body {
     }
 }
 
-.feature::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -145px;
-    max-height: 750px;
-    width: 100%;
-    height: 100%;
-    background-image: url("/img/bg-map.png");
-    background-size: cover;
-    background-position: bottom center;
-    background-repeat: no-repeat;
-    pointer-events: none;
-    z-index: 1;
-}
 
 @media (max-width: 99.98px) {
     .feature::after {
@@ -961,14 +943,95 @@ body {
     margin-right: 15px;
 }
 
-.feature__wrapper {
+
+
+.gun {
+    text-align: right;
+    margin-top: 1rem;
+
+}
+
+.gun img {
+    width: 60%;
+    height: auto;
+    display: inline-block;
+}
+
+.feature__cards-container {
     margin-top: 10rem;
     position: relative;
     z-index: 3;
 }
 
+.feature__cards {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+
+}
+
+.card {
+    position: relative;
+    background-color: #121212;
+    color: #ffffff;
+    padding: 40px 20px;
+    border-radius: 15px;
+    border: 1px solid;
+    border-image: linear-gradient(90deg, #29f2a200, #0ee37d, #29f2a200) 1;
+    border-left: 0;
+    border-bottom: 0;
+    border-right: 0;
+    width: calc(33.33% - 20px);
+    transition: all 0.3s ease;
+    margin: 20px;
+}
+
+.card img {
+    margin-top: -40px;
+    width: 70%;
+    height: auto;
+    margin-left: -30px;
+    margin-bottom: -25px;
+
+}
+
+.card__icons {
+    display: flex;
+    align-items: center;
+}
+
+.card__icons i {
+    font-size: 1.5rem;
+    color: #ffffffe8;
+    margin-bottom: 20px;
+    margin-top: -10px;
+}
+
+.card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 1.9rem;
+    color: #ffffff;
+    font-style: bold;
+    font-family: 'poppins', sans-serif;
+}
+
+.card span {
+    font-style: lighter;
+    color: #9ec1b2;
+}
+
 @media (max-width: 991.98px) {
-    .feature__wrapper {
-        margin-top: 0;
+    .feature__cards {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .card {
+        width: calc(100% - 78px);
+        margin: 20px 39px;
     }
 }
