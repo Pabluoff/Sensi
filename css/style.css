@@ -428,9 +428,14 @@ body {
     text-transform: uppercase;
     border-radius: 4.5rem;
     color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0px 0px 70px rgba(26, 226, 118, 0.5);
     transition: all 0.3s;
     background-size: 100%;
     border: none;
+}
+
+.button:active {
+    transform: scale(0.97);
 }
 
 @media (max-width: 991.98px) {
@@ -1026,6 +1031,17 @@ body {
 
 @media (max-width: 991.98px) {
     .feature__cards {
+        align-items: center;
+    }
+
+    .gun img {
+        width: 40%;
+    }
+
+}
+
+@media(max-width: 700px) {
+    .feature__cards {
         flex-direction: column;
         align-items: stretch;
     }
@@ -1033,5 +1049,27 @@ body {
     .card {
         width: calc(100% - 78px);
         margin: 20px 39px;
+    }
+
+    .gun img {
+        width: 60%;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .feature__cards {
+        justify-content: center;
+        margin-left: 35px;
+    }
+
+    .card {
+        width: calc(25% - 20px);
+        margin: 20px 10px;
+
+    }
+
+    .gun img {
+        display: none;
     }
 }
