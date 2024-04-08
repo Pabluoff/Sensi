@@ -790,7 +790,6 @@ body {
     background-repeat: no-repeat;
     pointer-events: none;
     background-size: cover;
-    z-index: 2;
 }
 
 @media (max-width: 991.98px) {
@@ -806,13 +805,10 @@ body {
     }
 }
 
-.feature .line-03 {
-    z-index: 2;
-}
 
 .feature .container {
     position: relative;
-    padding: 21rem 0 21rem;
+    padding: 21rem 0 10rem;
 }
 
 @media (max-width: 991.98px) {
@@ -1024,9 +1020,35 @@ body {
     font-family: 'poppins', sans-serif;
 }
 
+
+@media (max-width: 991.98px) {
+    .feature__text {
+        margin-top: 2rem;
+        font-size: 1.4rem;
+    }
+}
+
 .card span {
     font-style: lighter;
     color: #9ec1b2;
+}
+
+.feature__text {
+    margin-top: 2rem;
+    font-size: 1.6rem;
+    text-align: center;
+    color: #fff;
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+@media (max-width: 991.98px) {
+    .feature__text {
+        font-size: 1.4rem;
+        max-width: 80%;
+    }
 }
 
 @media (max-width: 991.98px) {
@@ -1073,3 +1095,101 @@ body {
         display: none;
     }
 }
+
+/*Depoimentos*/
+
+.testimonials {
+    margin-top: -12.5rem;
+    position: relative;
+}
+
+@media (max-width: 991.98px) {
+    .testimonials {
+        margin-top: -4rem;
+    }
+}
+
+.testimonials .line-01 {
+    z-index: 10;
+}
+
+.testimonials .container {
+    padding: 0 0 15.6rem;
+    position: relative;
+}
+
+@media (max-width: 991.98px) {
+    .testimonials .container {
+        padding: 0 0 6rem;
+    }
+}
+
+
+@media (max-width: 991.98px) {
+    .testimonials::before {
+        display: none;
+    }
+}
+
+.testimonials__wrapper {
+    position: relative;
+    display: flex;
+    padding: 0 2.5rem;
+}
+
+@media (max-width: 991.98px) {
+    .testimonials__wrapper {
+        display: block;
+    }
+}
+
+
+.testimonials__titles {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    z-index: 10;
+    margin-top: 18.1rem;
+}
+
+@media (max-width: 991.98px) {
+    .testimonials__titles {
+        flex-direction: column;
+        padding-left: 3.1rem;
+        margin-top: 0;
+    }
+}
+
+.testimonials .title-section {
+    margin-right: 5.7rem;
+}
+
+.testimonials__title {
+    position: relative;
+    max-width: 44.5rem;
+    width: 100%;
+    padding-left: 3.1rem;
+    letter-spacing: -0.01em;
+}
+
+@media (max-width: 991.98px) {
+    .testimonials__title {
+        margin-top: 2.9rem;
+        padding-left: 0;
+    }
+}
+
+.testimonials__title::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(95.27deg,
+            #1cd8b6 -0.85%,
+            #4df1b5 39.07%,
+            #39f18e 89.32%);
+}
+
+
