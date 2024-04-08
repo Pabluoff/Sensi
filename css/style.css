@@ -1192,4 +1192,10 @@ body {
             #39f18e 89.32%);
 }
 
-
+@media (max-width: 991.98px) {
+    .testimonials__title::before {
+        height: 10.5rem;
+        left: -3.7rem;
+        top: -5.3rem;
+    }
+}
