@@ -659,6 +659,7 @@ body {
     z-index: 10;
     transition: transform 0.3s, color 0.3s;
     display: none;
+    z-index: 0;
 }
 
 .play-button:hover {
@@ -711,27 +712,38 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.726);
+    background-color: #000000ba;
     color: white;
-    border: solid 2px #7a7a7a49;
+    border: solid 2px #aaaaaa5b;
     padding: 14px;
     border-radius: 5px;
     font-size: 15px;
     text-align: center;
     cursor: pointer;
     transition: all 0.4s ease;
+    z-index: 1;
 }
 
 #sound-icon i {
-    margin-right: 3px;
+    margin-right: 5px;
+    width: 8px;
+    display: inline-block;
+
 }
 
-#sound-icon span {
-    vertical-align: middle;
-}
 
 #sound-icon:hover {
-    background-color: #000000;
+    background-color: #000;
+}
+
+#progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 5px;
+    background-color: #1cd8b6cd;
+    transition: width 0.1s linear;
 }
 
 /*Como funciona*/
@@ -1192,10 +1204,16 @@ body {
             #39f18e 89.32%);
 }
 
+
 @media (max-width: 991.98px) {
     .testimonials__title::before {
         height: 10.5rem;
         left: -3.7rem;
         top: -5.3rem;
     }
+}
+
+.testimonials img {
+    width: 100%;
+    height: auto;
 }
