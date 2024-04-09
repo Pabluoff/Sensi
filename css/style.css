@@ -200,16 +200,10 @@ body {
 }
 
 .logo__main {
-    font-weight: 600;
-    font-family: 'arial', cursive;
-    font-style: normal;
-    font-size: 2.7rem;
-}
-
-.logo__sub {
-    font-size: 2.5rem;
     font-family: 'Mystique', sans-serif;
     font-weight: lighter;
+    font-style: normal;
+    font-size: 2.7rem;
 }
 
 @media (max-width: 991.98px) {
