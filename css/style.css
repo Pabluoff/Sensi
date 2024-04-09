@@ -195,14 +195,15 @@ body {
     opacity: 1;
     transition: opacity 0.3s;
     display: inline-block;
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
+    padding-left: 3px;
+    margin-top: -13px;
 }
 
 .logo__main {
     font-family: 'Mystique', sans-serif;
     font-weight: lighter;
-    font-style: normal;
     font-size: 2.7rem;
 }
 
@@ -210,6 +211,7 @@ body {
     .header__logo {
         max-width: 13.5rem;
         padding: 24px 16px;
+        margin-top: -1px;
     }
 }
 
