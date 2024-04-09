@@ -46,13 +46,15 @@ document.addEventListener('DOMContentLoaded', function () {
         // Verifica se o vídeo chegou ao fim
         if (progress === 100) {
             isFirstPlay = true;
-            soundIcon.style.display = 'block';
+            playButton.style.display = 'block'; // Exibe o botão de reprodução quando o vídeo termina
         } else {
+            // Continua a atualização da barra de progresso enquanto o vídeo estiver sendo reproduzido
             requestAnimationFrame(updateProgressBar);
         }
 
+        // Verifica se o vídeo está no fim e oculta o ícone de som
         if (video.currentTime >= video.duration - 0.1) {
-            playButton.style.display = 'none';
+            soundIcon.style.display = 'none';
         }
     }
 
@@ -122,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function toggleVolumeIcon() {
         currentIndex = (currentIndex + 1) % volumeIcons.length;
         icon.className = 'fa-solid ' + volumeIcons[currentIndex];
-        setTimeout(toggleVolumeIcon, 1000);
+        setTimeout(toggleVolumeIcon, 1000); 
     }
 
     toggleVolumeIcon();
