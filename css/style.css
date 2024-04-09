@@ -313,11 +313,10 @@ body {
 
 .header__menu li a {
     color: #fff;
-    font-weight: 500;
+    font-weight: bold;
     font-size: 1.2rem;
     line-height: 1.5rem;
     letter-spacing: 0.4px;
-    color: #fff;
 }
 
 @media (max-width: 991.98px) {
@@ -325,11 +324,12 @@ body {
         font-size: 1.6rem;
         line-height: 2.4rem;
         letter-spacing: unset;
+        font-weight: 500;
     }
 }
 
 .header__menu li a:hover {
-    color: #0ee37d;
+    color: #7fffc1;
 }
 
 .header__btn {
