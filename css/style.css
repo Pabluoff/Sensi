@@ -412,9 +412,8 @@ body {
 }
 
 .button {
-    position: relative;
     display: block;
-    max-width: 34.2rem;
+    max-width: 28.2rem;
     width: 100%;
     padding: 1rem 0;
     background: linear-gradient(95.27deg,
@@ -428,18 +427,30 @@ body {
     text-align: center;
     letter-spacing: 0.04rem;
     text-transform: uppercase;
-    border-radius: 4.5rem;
+    border-radius: 5px;
     color: rgba(0, 0, 0, 0.9);
     box-shadow: 0px 0px 70px rgba(26, 226, 118, 0.5);
     transition: all 0.3s;
     background-size: 100%;
     border: none;
+    transition: background-color 0.3s ease;
+    animation: animate-outline 1s ease-out infinite;
+    text-decoration: none;
 }
 
 .button:active {
     transform: scale(0.97);
 }
 
+@keyframes animate-outline {
+    from {
+        outline: 0px solid #39f18e;
+    }
+
+    to {
+        outline: 14px solid #f94ff600;
+    }
+}
 @media (max-width: 991.98px) {
     .desck-btn {
         display: none;
