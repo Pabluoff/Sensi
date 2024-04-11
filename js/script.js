@@ -155,8 +155,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.querySelectorAll(".swiper-slide img").forEach(function (img) {
                     img.classList.add("swiper-slide-hidden");
                 });
-                // Exibe as imagens dos três slides visíveis
-                var visibleSlides = this.slides.slice(this.activeIndex, this.activeIndex + 3);
+                // Exibe as imagens dos slides visíveis em dispositivos desktop
+                var visibleSlides = this.slides.slice(this.activeIndex, this.activeIndex + this.params.slidesPerView);
                 visibleSlides.forEach(function (slide) {
                     var img = slide.querySelector("img");
                     if (img) {
