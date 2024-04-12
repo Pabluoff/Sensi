@@ -1332,7 +1332,7 @@ body {
     background-position: center;
     animation: rotateAnimation 5s linear infinite;
     z-index: 0;
-    filter: blur(50px);
+    filter: blur(90px);
 }
 
 @keyframes rotateAnimation {
