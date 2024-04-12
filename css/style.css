@@ -1323,9 +1323,9 @@ body {
     content: '';
     position: absolute;
     top: 40%;
-    left: 10%;
-    width: 300px;
-    height: 300px;
+    left: 5%;
+    width: 200px;
+    height: 200px;
     background-image: url('/img/gradient.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -1345,6 +1345,19 @@ body {
     }
 }
 
+@media (max-width: 768px) {
+    .swiper-container::before {
+        content: '';
+        position: absolute;
+        top: 30%;
+        left: 30%;
+        width: 250px;
+        height: 150px;
+        filter: blur(50px);
+
+    }
+}
+
 @media (max-width: 991.98px) {
     .swiper-container {
         padding-left: 35px;
@@ -1352,16 +1365,6 @@ body {
         margin-top: 4rem;
     }
 
-    .swiper-container::before {
-        content: '';
-        position: absolute;
-        top: 35%;
-        left: 35%;
-        width: 250px;
-        height: 150px;
-        filter: blur(50px);
-
-    }
 }
 
 @media (max-width: 991.98px) {
