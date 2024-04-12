@@ -1349,7 +1349,7 @@ body {
         content: '';
         position: absolute;
         top: 35%;
-        left: 30%;
+        left: 100%;
         width: 250px;
         height: 150px;
         filter: blur(40px);
@@ -1414,7 +1414,7 @@ body {
     position: absolute;
     top: 45%;
     transform: translateY(-50%);
-    background-color: rgba(137, 137, 137, 0.463);
+    background-color: rgba(0, 0, 0, 0.463);
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -1442,7 +1442,7 @@ body {
     }
 
     .custom-swiper-button-next {
-        right: 15px;
+        right: 10px;
         top: 49%;
     }
 }
