@@ -1299,7 +1299,7 @@ body {
 @media (max-width: 991.98px) {
     .swiper-container {
         padding-left: 35px;
-        padding-right: 33px;
+        padding-right: 25px;
         margin-top: 4rem;
     }
 }
@@ -1335,8 +1335,7 @@ body {
 .swiper-pagination-bullet {
     width: 10px;
     height: 10px;
-    background-color: rgba(255, 255, 255, 0.5);
-    border: 2px solid #00ffbb;
+    background-color: rgb(71, 71, 71);
     border-radius: 50%;
     display: inline-block;
     margin: 0 5px;
@@ -1346,7 +1345,6 @@ body {
 
 .swiper-pagination-bullet-active {
     background-color: #00ffbb;
-    border-color: #fff;
 }
 
 .custom-swiper-button-next,
@@ -1367,12 +1365,12 @@ body {
 }
 
 .custom-swiper-button-next {
-    right: -15px;
-    top: 49%;
+    right: -14px;
+    top: 45%;
 }
 
 .custom-swiper-button-prev {
-    left: 5px;
+    left: 1px;
 }
 
 @media (max-width: 991.98px) {
@@ -1383,14 +1381,16 @@ body {
 
     .custom-swiper-button-next {
         right: 15px;
+        top: 49%;
     }
 }
 
 .custom-swiper-button-next i,
 .custom-swiper-button-prev i {
     color: #ffffff;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
+
 }
 
 .swiper-slide img.swiper-slide-hidden {
