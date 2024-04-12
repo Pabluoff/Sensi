@@ -1346,14 +1346,7 @@ body {
 
 @media (max-width: 768px) {
     .swiper-container::before {
-        content: '';
-        position: absolute;
-        top: 35%;
-        left: 10%;
-        width: 250px;
-        height: 90px;
-        filter: blur(50px);
-
+        display: none;
     }
 }
 
