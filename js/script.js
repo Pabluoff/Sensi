@@ -145,8 +145,8 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         breakpoints: {
             768: {
-                slidesPerView: 3, // Três imagens por vez em dispositivos desktop
-                spaceBetween: 30
+                slidesPerView: 3,
+                spaceBetween: 16
             }
         },
         on: {
