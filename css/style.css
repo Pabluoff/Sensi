@@ -1359,7 +1359,7 @@ body {
 
 @media (max-width: 991.98px) {
     .swiper-container {
-        padding-left: 35px;
+        padding-left: 38px;
         padding-right: 25px;
         margin-top: 4rem;
     }
@@ -1438,8 +1438,8 @@ body {
 
 @media (max-width: 991.98px) {
     .custom-swiper-button-prev {
-        left: 17px;
-        top: 49%;
+        left: 19px;
+        top: 47%;
     }
 
     .custom-swiper-button-next {
