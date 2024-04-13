@@ -1405,41 +1405,49 @@ body {
     background-color: #00ffbb;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
+.custom-swiper-button-next,
+.custom-swiper-button-prev {
     position: absolute;
     top: 45%;
     transform: translateY(-50%);
-    color: #fff;
+    background-color: rgba(0, 0, 0, 0.463);
+    border-radius: 50%;
     width: 40px;
     height: 40px;
     cursor: pointer;
     z-index: 10;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
 }
 
-.swiper-button-next {
+.custom-swiper-button-next {
     right: -14px;
     top: 45%;
 }
 
-.swiper-button-prev {
+.custom-swiper-button-prev {
     left: 1px;
 }
 
 @media (max-width: 991.98px) {
-    .swiper-button-prev {
+    .custom-swiper-button-prev {
         left: 17px;
         top: 48%;
     }
 
-    .swiper-button-next {
+    .custom-swiper-button-next {
         right: 10px;
         top: 49%;
     }
+}
+
+.custom-swiper-button-next i,
+.custom-swiper-button-prev i {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: bold;
 }
 
 .swiper-slide img.swiper-slide-hidden {
