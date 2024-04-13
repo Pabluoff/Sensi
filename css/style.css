@@ -1369,7 +1369,7 @@ body {
     max-height: 100%;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-    border: 2px solid #ffffffa8;
+    border: 2px solid #00d16580;
     transition: transform 0.3s ease, border-color 0.3s ease;
     aspect-ratio: 1 / 1;
     object-fit: cover;
@@ -1377,7 +1377,7 @@ body {
 
 .swiper-slide img:hover {
     transform: scale(1.05);
-    border-color: #00d16580;
+    border-color: #ffffffa8;
 }
 
 .swiper-pagination {
