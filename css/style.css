@@ -521,7 +521,7 @@ body {
 
 @media (max-width: 991.98px) {
     .lobby__wrapper {
-        padding: 10rem 0 3.4rem 1.5rem;
+        padding: 10rem 0 5.4rem 1.5rem;
         display: block;
         text-align: center;
     }
@@ -707,7 +707,7 @@ body {
     width: 100%;
     padding-top: 56.25%;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 0px 0px 70px rgba(26, 26, 26, 0.571);
 }
 
@@ -752,8 +752,8 @@ body {
     bottom: 0;
     left: 0;
     width: 0%;
-    height: 5px;
-    background-color: #1cd8b6cd;
+    height: 7px;
+    background-color: #00ffc3;
     transition: width 0.1s linear;
 }
 
@@ -1306,7 +1306,6 @@ body {
 }
 
 
-
 .swiper-container {
     width: 70%;
     align-items: center;
@@ -1316,7 +1315,6 @@ body {
     position: relative;
     padding-left: 15px;
 }
-
 
 .swiper-container::before {
     content: '';
@@ -1356,7 +1354,6 @@ body {
         padding-right: 25px;
         margin-top: 4rem;
     }
-
 }
 
 @media (max-width: 991.98px) {
@@ -1370,13 +1367,18 @@ body {
     max-width: 100%;
     height: auto;
     max-height: 100%;
-    border-radius: 5px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    border: 2px solid #ffffffa8;
+    transition: transform 0.3s ease, border-color 0.3s ease;
     aspect-ratio: 1 / 1;
     object-fit: cover;
 }
 
+.swiper-slide img:hover {
+    transform: scale(1.05);
+    border-color: #00d16580;
+}
 
 .swiper-pagination {
     position: absolute;
@@ -1403,13 +1405,12 @@ body {
     background-color: #00ffbb;
 }
 
-.custom-swiper-button-next,
-.custom-swiper-button-prev {
+.swiper-button-next,
+.swiper-button-prev {
     position: absolute;
     top: 45%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.463);
-    border-radius: 50%;
+    color: #fff;
     width: 40px;
     height: 40px;
     cursor: pointer;
@@ -1420,33 +1421,25 @@ body {
     transition: all 0.3s ease;
 }
 
-.custom-swiper-button-next {
+.swiper-button-next {
     right: -14px;
     top: 45%;
 }
 
-.custom-swiper-button-prev {
+.swiper-button-prev {
     left: 1px;
 }
 
 @media (max-width: 991.98px) {
-    .custom-swiper-button-prev {
-        left: 19px;
-        top: 47%;
+    .swiper-button-prev {
+        left: 17px;
+        top: 48%;
     }
 
-    .custom-swiper-button-next {
+    .swiper-button-next {
         right: 10px;
         top: 49%;
     }
-}
-
-.custom-swiper-button-next i,
-.custom-swiper-button-prev i {
-    color: #ffffff;
-    font-size: 22px;
-    font-weight: bold;
-
 }
 
 .swiper-slide img.swiper-slide-hidden {

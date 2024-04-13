@@ -132,16 +132,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     var swiper = new Swiper(".swiper-container", {
-        slidesPerView: 1, // Uma imagem por vez em dispositivos móveis
+        slidesPerView: 1,
         spaceBetween: 30,
         loop: true,
+        autoplay: {
+            delay: 5000, // Tempo em milissegundos 
+            disableOnInteraction: false,
+        },
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
         },
         navigation: {
-            nextEl: ".custom-swiper-button-next",
-            prevEl: ".custom-swiper-button-prev",
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
         },
         breakpoints: {
             768: {
