@@ -1344,7 +1344,10 @@ body {
 
 @media (max-width: 768px) {
     .swiper-container::before {
-        display: none;
+        display: flex;
+        left: 120%;
+        width: 100px;
+        height: 200px;
     }
 }
 
@@ -1368,16 +1371,19 @@ body {
     height: auto;
     max-height: 100%;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-    border: 2px solid #00d16580;
-    transition: transform 0.3s ease, border-color 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(31, 31, 31, 0.5);
+    border: 2px solid;
+    border-image: linear-gradient(90deg, #29f2a200, #0ee37d, #29f2a200) 1;
+    border-left: 0;
+    border-bottom: 0;
+    border-right: 0;
+    transition: transform 0.3s ease;
     aspect-ratio: 1 / 1;
     object-fit: cover;
 }
 
 .swiper-slide img:hover {
     transform: scale(1.05);
-    border-color: #ffffffa8;
 }
 
 .swiper-pagination {
