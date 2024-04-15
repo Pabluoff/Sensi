@@ -40,6 +40,18 @@
         <h1>Sem Conexão</h1>
         <p>Por favor, verifique sua conexão com a internet e tente novamente.</p>
     </div>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('/service-worker.js').then(function (registration) {
+                    console.log('Service Worker registrado com sucesso:', registration);
+                }, function (err) {
+                    console.error('Erro ao registrar o Service Worker:', err);
+                });
+            });
+        }
+    </script>
+
 </body>
 
 </html>
