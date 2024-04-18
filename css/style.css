@@ -604,6 +604,7 @@ body {
 @media (max-width: 991.98px) {
     .lobby__content p {
         max-width: unset;
+        font-size: 1.6rem;
     }
 }
 
