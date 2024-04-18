@@ -413,51 +413,46 @@ body {
 }
 
 .button {
+    --green: #1bfda3;
+    text-align: center;
+    font-size: 15px;
     display: block;
     max-width: 28.2rem;
     width: 100%;
     padding: 1rem 0;
-    background: linear-gradient(95.27deg,
-            #1cd8b6 -0.85%,
-            #4df1b5 39.07%,
-            #39f18e 89.32%);
-    cursor: pointer;
-    font-size: 1.4rem;
-    font-weight: 600;
-    line-height: 2.1rem;
-    text-align: center;
-    letter-spacing: 0.04rem;
-    text-transform: uppercase;
-    border-radius: 5px;
-    color: rgba(0, 0, 0, 0.9);
-    box-shadow: 0px 0px 70px rgba(26, 226, 118, 0.5);
+    letter-spacing: 0.06em;
+    font-family: inherit;
+    position: relative;
+    border-radius: 0.6em;
+    overflow: hidden;
     transition: all 0.3s;
-    background-size: 100%;
-    border: none;
-    transition: background-color 0.3s ease;
-    animation: animate-outline 1s ease-out infinite;
-    text-decoration: none;
+    line-height: 1.4em;
+    border: 2px solid var(--green);
+    background: linear-gradient(to right, rgba(27, 253, 156, 0.1) 1%, transparent 40%, transparent 60%, rgba(27, 253, 156, 0.1) 100%);
+    color: var(--green);
+    box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1);
 }
 
-.button:active {
-    transform: scale(0.97);
+.button:hover {
+    color: #82ffc9;
+    box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.6), 0 0 9px 3px rgba(27, 253, 156, 0.2);
 }
 
-@keyframes animate-outline {
-    from {
-        outline: 0px solid #39f18e;
-    }
-
-    to {
-        outline: 14px solid #f94ff600;
-    }
+.button:before {
+    content: "";
+    position: absolute;
+    left: -4em;
+    width: 4em;
+    height: 100%;
+    top: 0;
+    transition: transform .4s ease-in-out;
+    background: linear-gradient(to right, transparent 1%, rgba(27, 253, 156, 0.1) 40%, rgba(27, 253, 156, 0.1) 60%, transparent 100%);
 }
 
-@media (max-width: 991.98px) {
-    .desck-btn {
-        display: none;
-    }
+.button:hover:before {
+    transform: translateX(15em);
 }
+
 
 @media (min-width: 992.98px) {
     .mob-btn {
@@ -512,7 +507,7 @@ body {
 
 .lobby__wrapper {
     padding-top: 16.6rem;
-    padding: 23rem 0 25rem 0;
+    padding: 15rem 0 25rem 0;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -532,6 +527,10 @@ body {
         display: inline-block;
         margin: auto;
         margin-top: 2rem;
+    }
+
+    .desck-btn {
+        display: none;
     }
 }
 
@@ -1460,4 +1459,123 @@ body {
 
 .swiper-slide img.swiper-slide-hidden {
     visibility: hidden;
+}
+
+
+/* Estilo para a seção Price */
+.price-section {
+    padding: 10px 0;
+}
+
+
+/* Estilo para o contêiner das ofertas */
+.offer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    /* Permite que os elementos quebrem a linha quando não houver espaço suficiente */
+}
+
+/* Estilo para cada oferta */
+.offer {
+    background-color: #0e0e0e;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    width: 370px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+}
+
+.offer-description {
+    color: #a2a2a2;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: start;
+    line-height: 3.2rem;
+    font-size: 16px;
+}
+
+.offer-title {
+    color: #fff;
+    font-size: 3rem;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.offer-description .fa-check {
+    color: #00b894;
+}
+
+
+.offer-description.ultra {
+    color: #fff;
+}
+
+.offer-description .fa-times {
+    color: #d63031;
+}
+
+.offer-price {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    text-decoration-color: #00ff62;
+    color: #ffffff;
+}
+
+.new-price {
+    color: #ffffff;
+    font-size: 37px;
+    font-weight: bold;
+    margin-top: -05px;
+}
+
+.offer-label {
+    font-size: 14px;
+    color: #fff;
+    font-weight: lighter;
+
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 10px 40px;
+    background-color: #484848;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #343434;
+}
+
+.btn-primary a {
+    color: #fff;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    .offer {
+        width: calc(100% - 40px);
+        margin: 0 auto 20px;
+    }
+
+    .offer-description {
+        line-height: 2.8rem;
+        font-size: 13px;
+    }
+
 }
