@@ -1596,9 +1596,10 @@ body {
     }
 
     .offer-description {
-        line-height: 2.8rem;
-        font-size: 13px;
-        word-spacing: wrap;
+        line-height: 3rem;
+        font-size: 14px;
+        white-space: nowrap;
+
     }
 
     .price-section::before {
