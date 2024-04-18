@@ -1507,6 +1507,7 @@ body {
 
 .offer-description .fa-check {
     color: #00b894;
+    text-shadow: 0 0 10px #00b894, 0 0 20px #00b894;
 }
 
 
@@ -1516,6 +1517,7 @@ body {
 
 .offer-description .fa-times {
     color: #d63031;
+    text-shadow: 0 0 10px #d63031, 0 0 20px #d63031;
 }
 
 .offer-price {
