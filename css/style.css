@@ -1462,23 +1462,36 @@ body {
 }
 
 
-/* Estilo para a seção Price */
+/* Price */
 .price-section {
     padding: 10px 0;
 }
 
 
-/* Estilo para o contêiner das ofertas */
 .offer-container {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 30px;
     flex-wrap: wrap;
-    /* Permite que os elementos quebrem a linha quando não houver espaço suficiente */
 }
 
-/* Estilo para cada oferta */
+@media (max-width: 1980px) {
+
+    .testimonials .line-01 {
+        top: 20rem;
+        height: calc(100% - 20rem);
+    }
+}
+
+@media (max-width: 1399.98px) {
+
+    .testimonials .line-01 {
+        top: 0;
+        height: 100%;
+    }
+}
+
 .offer {
     background-color: #0e0e0e;
     border-radius: 8px;
@@ -1490,7 +1503,7 @@ body {
 }
 
 .offer-description {
-    color: #a2a2a2;
+    color: #c5c5c5;
     margin-top: 2rem;
     margin-bottom: 2rem;
     text-align: start;
