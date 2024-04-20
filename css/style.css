@@ -1467,7 +1467,6 @@ body {
 .price-section {
     padding: 10px 0;
     position: relative;
-    /* Adiciona posição relativa para usar ::before */
 }
 
 .price-section::before {
@@ -1495,33 +1494,34 @@ body {
 
 .offer {
     background-color: #0e0e0e;
-    border-radius: 8px;
+    border-radius: 10px;
     padding: 30px;
     text-align: center;
     width: 370px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     margin-bottom: 20px;
     position: relative;
+    overflow: hidden;
 }
 
 
 .offer-description {
     color: #c7c6c6;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
     text-align: start;
     line-height: 3.4rem;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .offer-title {
     position: relative;
     color: #ffffff;
-    font-size: 3rem;
+    font-size: 2.5rem;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: #161616;
     margin-top: -8px;
+    text-transform: uppercase;
 }
 
 
@@ -1541,13 +1541,13 @@ body {
 }
 
 .offer-price {
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 20px;
 }
 
 .old-price {
     text-decoration: line-through;
-    text-decoration-color: #00ff62;
+    text-decoration-color: #2ecc71;
     color: #ffffff;
 }
 
@@ -1567,9 +1567,8 @@ body {
 
 .btn-primary {
     display: inline-block;
-    padding: 10px 40px;
-    background-color: #484848;
-    color: #fff;
+    padding: 15px 40px;
+    background-color: #363636;
     text-decoration: none;
     border: none;
     border-radius: 5px;
@@ -1581,11 +1580,11 @@ body {
 }
 
 .btn-primary:hover {
-    background-color: #343434;
+    background-color: #2e2e2e;
 }
 
 .btn-primary a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -1608,4 +1607,24 @@ body {
         transform: scale(0.3);
     }
 
+}
+
+
+
+.ribbon {
+    position: absolute;
+    display: flex;
+    top: 43px;
+    right: -30px;
+    background-color: #0ee18d;
+    color: #fff;
+    padding: 5px 30px;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transform: rotate(40deg) translateY(-22px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid #008c6c;
+    border-right: 2px solid #008c6c;
 }
