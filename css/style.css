@@ -1627,31 +1627,27 @@ body {
     border-right: 2px solid #008c6c;
 }
 
-/*Beneficio*/
 .benefits-section {
-    padding: 40px 0;
+    padding: 10px 0;
     margin-bottom: 60px;
-    position: relative;
-    overflow: hidden;
+    margin-top: -3px;
 }
 
 .section-title {
     text-align: center;
     font-size: 3rem;
-    margin-bottom: 40px;
+    margin-bottom: 70px;
     color: #fff;
     text-transform: uppercase;
     font-weight: bold;
-    z-index: 2;
-    position: relative;
 }
 
 .benefits-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin: 0 140px;
     padding-bottom: 10px;
-
 }
 
 .benefit {
@@ -1661,7 +1657,6 @@ body {
     padding: 20px;
     text-align: center;
     margin-bottom: 20px;
-    z-index: 2;
 }
 
 .benefit-icon {
@@ -1679,15 +1674,18 @@ body {
 @media screen and (max-width: 768px) {
     .benefits-container {
         flex-direction: column;
+        margin-top: -55px;
+        margin: 0 0;
         padding: 10px 5px;
+
     }
 
     .benefit {
-        width: calc(100% - 20px);
-        margin: 10px;
+        width: calc(100% - 78px);
+        margin: 20px 39px;
     }
 
-    .section-title {
-        margin-bottom: 30px;
-    }
+        .section-title {
+            margin-bottom: 20px;
+        }
 }
