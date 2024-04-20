@@ -1647,7 +1647,6 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 0 140px;
-    padding-bottom: 10px;
 }
 
 .benefit {
@@ -1676,7 +1675,7 @@ body {
         flex-direction: column;
         margin-top: -55px;
         margin: 0 0;
-        padding: 10px 5px;
+        padding: 10px 6px;
 
     }
 
@@ -1685,7 +1684,7 @@ body {
         margin: 20px 39px;
     }
 
-        .section-title {
-            margin-bottom: 20px;
-        }
+    .section-title {
+        margin-bottom: 20px;
+    }
 }
