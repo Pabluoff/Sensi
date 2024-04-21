@@ -1727,6 +1727,12 @@ body {
 .founder-name {
     font-size: 2rem;
     margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.founder-name .fa-check-circle {
+    font-size: 1.6rem;
+    margin-right: 5px;
 }
 
 .founder-description {
