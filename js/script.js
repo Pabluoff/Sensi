@@ -172,6 +172,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+//FAQ
 document.addEventListener("DOMContentLoaded", function () {
     const faqItems = document.querySelectorAll(".faq-item");
 
@@ -180,17 +181,28 @@ document.addEventListener("DOMContentLoaded", function () {
             const answer = this.querySelector(".faq-answer");
             const isOpen = answer.classList.contains("open");
 
+            // Fecha todas as respostas e redefine todos os ícones
             const allAnswers = document.querySelectorAll(".faq-answer");
+            const allIcons = document.querySelectorAll(".faq-question i");
             allAnswers.forEach(ans => {
-                if (ans !== answer) {
-                    ans.classList.remove("open");
-                }
+                ans.classList.remove("open");
+            });
+            allIcons.forEach(icon => {
+                icon.classList.remove("fa-minus");
+                icon.classList.add("fa-plus");
             });
 
+            // Abre ou fecha a resposta clicada e atualiza o ícone
             if (!isOpen) {
                 answer.classList.add("open");
+                const icon = this.querySelector(".faq-question i");
+                icon.classList.remove("fa-plus");
+                icon.classList.add("fa-minus");
             } else {
                 answer.classList.remove("open");
+                const icon = this.querySelector(".faq-question i");
+                icon.classList.remove("fa-minus");
+                icon.classList.add("fa-plus");
             }
         });
     });
