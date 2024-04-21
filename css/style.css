@@ -1627,6 +1627,7 @@ body {
     border-right: 2px solid #008c6c;
 }
 
+/*Beneficio*/
 .benefits-section {
     padding: 10px 0;
     margin-bottom: 60px;
@@ -1686,5 +1687,83 @@ body {
 
     .section-title {
         margin-bottom: 20px;
+    }
+}
+
+/* About Section */
+.about-section {
+    padding: 60px 0;
+    color: #fff;
+}
+
+.container-about {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    /* Margens horizontais padrão */
+}
+
+.founder-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.founder-image {
+    flex: 0 0 50%;
+    margin-right: 30px;
+}
+
+.founder-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.founder-info {
+    flex: 0 0 50%;
+}
+
+.founder-name {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.founder-description {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #c7c7c7;
+    margin-top: 10px;
+}
+
+/* Media Query for Mobile */
+@media screen and (max-width: 768px) {
+    .container-about {
+        padding: 0 40px;
+    }
+
+    .about-section {
+        padding: 30px 0;
+    }
+
+    .founder-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .founder-image {
+        flex: 0 0 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .founder-info {
+        flex: 0 0 100%;
+    }
+}
+
+/* Media Query for Desktop */
+@media screen and (min-width: 769px) {
+    .container-about {
+        padding: 0 120px;
     }
 }
