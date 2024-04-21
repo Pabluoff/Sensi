@@ -1718,6 +1718,7 @@ body {
     width: 100%;
     border-radius: 15px;
     border: solid 2px #9c9c9c;
+    cursor: pointer;
 }
 
 .founder-info {
@@ -1794,7 +1795,7 @@ body {
     border-radius: 10px;
     padding: 20px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.5s ease;
 }
 
 .faq-item:hover {
@@ -1813,7 +1814,7 @@ body {
     line-height: 1.9;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease;
+    transition: max-height 0.5s ease;
     color: #ffffff;
 }
 
