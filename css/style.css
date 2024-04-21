@@ -1834,6 +1834,97 @@ body {
     }
 }
 
+
+/* Contato */
+.contact {
+    padding: 50px 0;
+    text-align: center;
+    color: #333;
+}
+
+.contact h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #000;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #0dbf69;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    padding: 12px 25px;
+    border: none;
+    background-color: #0dbf69;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #008c48;
+}
+
+@media (max-width: 768px) {
+    .contact-form {
+        max-width: 90%;
+    }
+}
+
+textarea {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+textarea::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.char-counter {
+    font-family: 'Poppins';
+    font-size: 12px;
+    position: absolute;
+    bottom: 28px;
+    right: 5px;
+    color: rgb(0, 255, 0);
+    text-shadow: 0.5px 0.5px 0 rgb(0, 0, 0), -0.5px -0.5px 0 rgb(0, 0, 0), 0.5px -0.5px 0 rgb(0, 0, 0), -0.5px 0.5px 0 rgb(0, 0, 0);
+}
+
+.char-counter.yellow {
+    color: rgb(255, 255, 0);
+}
+
+.char-counter.red {
+    color: rgb(255, 48, 48);
+}
+
 /*Footer*/
 .footer {
     background-color: #0e0e0e;

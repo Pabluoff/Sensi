@@ -181,7 +181,6 @@ document.addEventListener("DOMContentLoaded", function () {
             const answer = this.querySelector(".faq-answer");
             const isOpen = answer.classList.contains("open");
 
-            // Fecha todas as respostas e redefine todos os ícones
             const allAnswers = document.querySelectorAll(".faq-answer");
             const allIcons = document.querySelectorAll(".faq-question i");
             allAnswers.forEach(ans => {
@@ -192,7 +191,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 icon.classList.add("fa-plus");
             });
 
-            // Abre ou fecha a resposta clicada e atualiza o ícone
             if (!isOpen) {
                 answer.classList.add("open");
                 const icon = this.querySelector(".faq-question i");
@@ -207,3 +205,96 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+
+// função do contato
+const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    const form = document.querySelector('form');
+    const submitButton = form.querySelector('button[type="submit"]');
+    const charCountElement = document.getElementById('charCount');
+
+    const name = form.querySelector('input[name=name]').value;
+    const email = form.querySelector('input[name=email]').value;
+    const message = form.querySelector('textarea[name=message]').value;
+
+    submitButton.disabled = true;
+
+    submitButton.innerHTML = 'Enviando...';
+    submitButton.style.backgroundColor = '#5a5a5a';
+
+    try {
+        const response = await fetch('https://api.sheetmonkey.io/form/wsG7cDA8LsPr5PzQSEu5Bk', {
+            method: 'post',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ name, email, message }),
+        });
+
+        if (response.ok) {
+            submitButton.innerHTML = '<i class="uil uil-check"></i> Enviado com sucesso';
+            submitButton.style.backgroundColor = '#2ecc71';
+            form.reset();
+            charCountElement.textContent = '0 ';
+            charCountElement.className = 'char-counter green';
+
+            setTimeout(() => {
+                submitButton.innerHTML = 'Enviar Mensagem';
+                submitButton.style.backgroundColor = '';
+            }, 3000);
+
+        } else {
+
+            submitButton.innerHTML = 'Erro ao Enviar';
+            submitButton.style.backgroundColor = '#e74c3c';
+        }
+    } catch (error) {
+        console.error('Erro ao enviar a mensagem:', error);
+        submitButton.innerHTML = 'Erro ao Enviar';
+        submitButton.style.backgroundColor = '#e74c3c';
+    } finally {
+        submitButton.style.animation = 'none';
+        submitButton.disabled = false;
+    }
+};
+
+document.querySelector('form').addEventListener('submit', handleSubmit);
+
+// Função para atualizar a contagem de caracteres
+function updateCharCount() {
+    const textarea = document.querySelector('textarea[name=message]');
+    const charCount = textarea.value.length;
+    const charCountElement = document.getElementById('charCount');
+
+    charCountElement.textContent = charCount + ' ';
+
+    if (charCount <= 100) {
+        charCountElement.className = 'char-counter green';
+    } else if (charCount <= 150) {
+        charCountElement.className = 'char-counter yellow';
+    } else {
+        charCountElement.className = 'char-counter red';
+    }
+}
+
+// Adicionar evento de digitação para a atualização da contagem de caracteres
+document.querySelector('textarea[name=message]').addEventListener('input', updateCharCount);
+
+
+// Contador de caracters
+function countChars(input) {
+    const charCountElement = document.getElementById('charCount');
+    const charCounter = input.value.length;
+
+    charCountElement.textContent = charCounter + ' ';
+
+    if (charCounter <= 100) {
+        charCountElement.className = 'char-counter green';
+    } else if (charCounter <= 150) {
+        charCountElement.className = 'char-counter yellow';
+    } else {
+        charCountElement.className = 'char-counter red';
+    }
+}

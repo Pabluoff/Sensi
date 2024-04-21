@@ -51,7 +51,7 @@
                             <a href="#faq">Dúvidas</a>
                         </li>
                         <li>
-                            <a href="#suporte">Suporte</a>
+                            <a href="#contact">Suporte</a>
                         </li>
                     </ul>
                     <a href="" class="button">Quero meu acesso</a>
@@ -395,16 +395,34 @@
             </div>
         </div>
     </section>
-    <footer class="footer">
-    <div class="container">
-        <p>© 2024 PABLUO SENSI – Todos os Direitos Reservados</p>
-        <div class="social-media">
-            <a href="https://www.instagram.com/pabluoff" class="social-icon"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.tiktok.com/@pabluoff" class="social-icon"><i class="fab fa-tiktok"></i></a>
-            <a href="https://www.youtube.com/@Pabluoff." class="social-icon"><i class="fab fa-youtube"></i></a>
+    <!--Contato-->
+    <section id="contact" class="contact">
+        <h2>Entre em Contato</h2>
+        <div class="contact-form">
+            <form>
+                <input type="text" id="name" name="name" placeholder="Seu nome" required>
+                <input type="email" id="email" name="email" placeholder="Seu email" required>
+                <div style="position: relative;">
+                    <textarea id="message" name="message" rows="4" placeholder="Mensagem" required maxlength="200"
+                        oninput="countChars(this)"></textarea>
+                    <p class="char-counter" id="charCount">0</p>
+                </div>
+                <button type="submit">Enviar Mensagem</button>
+            </form>
         </div>
-    </div>
-</footer>
+        </div>
+    </section>
+    <!--Rodapé-->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 PABLUO SENSI – Todos os Direitos Reservados</p>
+            <div class="social-media">
+                <a href="https://www.instagram.com/pabluoff" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@pabluoff" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.youtube.com/@Pabluoff." class="social-icon"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
 
     <script src="/js/script.js"></script>
 </body>
