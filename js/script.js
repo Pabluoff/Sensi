@@ -172,14 +172,26 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-//faq
 document.addEventListener("DOMContentLoaded", function () {
     const faqItems = document.querySelectorAll(".faq-item");
 
     faqItems.forEach(item => {
         item.addEventListener("click", function () {
             const answer = this.querySelector(".faq-answer");
-            answer.classList.toggle("open");
+            const isOpen = answer.classList.contains("open");
+
+            const allAnswers = document.querySelectorAll(".faq-answer");
+            allAnswers.forEach(ans => {
+                if (ans !== answer) {
+                    ans.classList.remove("open");
+                }
+            });
+
+            if (!isOpen) {
+                answer.classList.add("open");
+            } else {
+                answer.classList.remove("open");
+            }
         });
     });
 });
