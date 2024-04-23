@@ -299,36 +299,39 @@ function countChars(input) {
     }
 }
 
-// Get the modals
 var modal = document.getElementById("modal");
 
-// Get the buttons that open the modal
-var modalBtns = document.querySelectorAll(".btn-primary");
+var modalBtnPremium = document.getElementById("modalBtnPremium");
+var modalBtnUltra = document.getElementById("modalBtnUltra");
 
-// Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// Function to open the modal
 function openModal() {
     modal.style.display = "block";
 }
 
-// Function to close the modal
 function closeModal() {
     modal.style.display = "none";
 }
 
-// Event listener for each modal button
-modalBtns.forEach(function (btn) {
-    btn.addEventListener("click", openModal);
+//link preço premium
+modalBtnPremium.addEventListener("click", function () {
+    openModal();
+    document.getElementById("btnApple").href = "link_para_oferta_premium_apple";
+    document.getElementById("btnAndroid").href = "link_para_oferta_premium_android";
 });
 
-// Event listener for closing the modal when clicking on <span> (x)
+//link preço ultra
+modalBtnUltra.addEventListener("click", function () {
+    openModal();
+    document.getElementById("btnApple").href = "link_para_oferta_ultra_apple";
+    document.getElementById("btnAndroid").href = "link_para_oferta_ultra_android";
+});
+
 span.onclick = function () {
     closeModal();
 }
 
-// Event listener for closing the modal when clicking anywhere outside of it
 window.onclick = function (event) {
     if (event.target == modal) {
         closeModal();

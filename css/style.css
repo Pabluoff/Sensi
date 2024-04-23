@@ -1993,7 +1993,7 @@ textarea::-webkit-scrollbar {
     position: absolute;
     color: #aaa;
     font-size: 28px;
-    font-weight: bold;
+    font-weight: lighter;
     top: 5px;
     right: 10px;
     cursor: pointer;
