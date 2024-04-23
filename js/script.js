@@ -298,3 +298,39 @@ function countChars(input) {
         charCountElement.className = 'char-counter red';
     }
 }
+
+// Get the modals
+var modal = document.getElementById("modal");
+
+// Get the buttons that open the modal
+var modalBtns = document.querySelectorAll(".btn-primary");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// Function to open the modal
+function openModal() {
+    modal.style.display = "block";
+}
+
+// Function to close the modal
+function closeModal() {
+    modal.style.display = "none";
+}
+
+// Event listener for each modal button
+modalBtns.forEach(function (btn) {
+    btn.addEventListener("click", openModal);
+});
+
+// Event listener for closing the modal when clicking on <span> (x)
+span.onclick = function () {
+    closeModal();
+}
+
+// Event listener for closing the modal when clicking anywhere outside of it
+window.onclick = function (event) {
+    if (event.target == modal) {
+        closeModal();
+    }
+}
