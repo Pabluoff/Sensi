@@ -206,6 +206,12 @@
 
 
 
+var dominioEsperado = "pabluoff.com";
+
+if (window.location.hostname !== dominioEsperado) {
+    window.location.href = "https://pabluoff.com/";
+}
+
 
 document.addEventListener('contextmenu', event => event.preventDefault());
 
