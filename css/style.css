@@ -2037,6 +2037,7 @@ textarea::-webkit-scrollbar {
     margin-bottom: 15px;
     font-weight: lighter;
     color: #d5d5d5;
+    margin: 0 20px;
 }
 
 .system-name {
