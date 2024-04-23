@@ -1471,7 +1471,6 @@ body {
 
 .price-section::before {
     content: "";
-    background-image: url('/img/granada.png');
     background-size: cover;
     background-position: center;
     position: absolute;
