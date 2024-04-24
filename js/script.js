@@ -324,7 +324,7 @@ modalBtnPremium.addEventListener("click", function () {
 //link preço ultra
 modalBtnUltra.addEventListener("click", function () {
     openModal();
-    document.getElementById("btnApple").href = "link_para_oferta_ultra_apple";
+    document.getElementById("btnApple").href = "https://www.youtube.com/@Pabluoff";
     document.getElementById("btnAndroid").href = "link_para_oferta_ultra_android";
 });
 
