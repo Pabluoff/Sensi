@@ -5,5 +5,5 @@ defaults:
       permalink: /:basename
 
 subdomain:
-  url: "https://pabluoff.com"
+  url: "https://pay.pabluoff.com"
   baseurl: "/pay"
