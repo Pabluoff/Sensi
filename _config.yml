@@ -3,7 +3,3 @@ defaults:
       path: "pages"
     values:
       permalink: /:basename
-
-subdomain:
-  url: "https://pay.pabluoff.com"
-  baseurl: "/pay"
