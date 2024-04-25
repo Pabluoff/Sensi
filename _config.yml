@@ -1,0 +1,9 @@
+defaults:
+  - scope:
+      path: "pages"
+    values:
+      permalink: /:basename
+
+subdomain:
+  url: "http://pay.pabluoff.com"
+  baseurl: "/pay"
