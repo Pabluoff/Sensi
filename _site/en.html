@@ -20,7 +20,7 @@
     <link rel="shortcut icon" href="/img/logo-sensi.png" type="image/png">
     <link rel="manifest" href="/img/site.webmanifest">
     <link rel="stylesheet" href="/css/style.css">
-    <title>Pabluoff | Métodos e Sensi</title>
+    <title>"Pabluoff | Methods and Sensi"</title>
 </head>
 
 <body>
@@ -420,7 +420,12 @@
             </div>
         </div>
     </footer>
-
+    <script>
+        var userLang = navigator.language || navigator.userLanguage;
+        if (!userLang.startsWith('en')) {
+            window.location.href = 'index.html';
+        }
+    </script>    
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="/js/script.js"></script>
 </body>

@@ -445,7 +445,17 @@
             </div>
         </div>
     </footer>
-
+    <script>
+        // Verifica o idioma do navegador
+        var userLang = navigator.language || navigator.userLanguage;
+        
+        // Redireciona para a página correspondente
+        if (userLang.startsWith('en')) {
+            window.location.href = 'en.html'; // Se for inglês, redireciona para en.html
+        } else {
+            window.location.href = 'index.html'; // Caso contrário, redireciona para index.html (português)
+        }
+    </script>    
     <script src="/js/script.js"></script>
 </body>
 
