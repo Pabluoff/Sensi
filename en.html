@@ -424,12 +424,18 @@ permalink: en
         </div>
     </footer>
     <script>
+        // Verifica se o cookie de redirecionamento já está definido
+        var redirected = document.cookie.replace(/(?:(?:^|.*;\s*)redirected\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+    
+        // Se o cookie não estiver definido e o idioma não for inglês, redireciona para /
         var userLang = navigator.language || navigator.userLanguage;
-        if (!userLang.startsWith('en')) {
+        if (!redirected && !userLang.startsWith('en')) {
             window.location.href = '/';
+            // Define o cookie de redirecionamento para indicar que o redirecionamento já ocorreu
+            document.cookie = "redirected=true; path=/";
         }
-    </script>    
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    </script>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="/js/script.js"></script>
 </body>
 

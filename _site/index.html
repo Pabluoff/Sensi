@@ -446,13 +446,18 @@
         </div>
     </footer>
     <script>
+        // Verifica se o cookie de redirecionamento já está definido
+        var redirected = document.cookie.replace(/(?:(?:^|.*;\s*)redirected\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+    
+        // Se o cookie não estiver definido e o idioma não for português, redireciona para /en
         var userLang = navigator.language || navigator.userLanguage;
-        
-        if (!userLang.startsWith('pt')) {
-            window.location.href = '/en'; 
+        if (!redirected && !userLang.startsWith('pt')) {
+            window.location.href = '/en';
+            // Define o cookie de redirecionamento para indicar que o redirecionamento já ocorreu
+            document.cookie = "redirected=true; path=/";
         }
     </script>
-            <script src="/js/script.js"></script>
+                <script src="/js/script.js"></script>
 </body>
 
 </html>
