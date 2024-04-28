@@ -446,14 +446,13 @@
         </div>
     </footer>
     <script>
-        // Verifica o idioma do navegador
         var userLang = navigator.language || navigator.userLanguage;
         
-        if (userLang.startsWith('en')) {
-            window.location.href = '/en';
+        if (!userLang.startsWith('pt')) {
+            window.location.href = '/en'; 
         }
     </script>
-        <script src="/js/script.js"></script>
+            <script src="/js/script.js"></script>
 </body>
 
 </html>
