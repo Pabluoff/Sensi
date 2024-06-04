@@ -317,15 +317,15 @@ function closeModal() {
 //link preço premium
 modalBtnPremium.addEventListener("click", function () {
     openModal();
-    document.getElementById("btnApple").href = "link_para_oferta_premium_apple";
-    document.getElementById("btnAndroid").href = "link_para_oferta_premium_android";
+    document.getElementById("btnApple").href = "https://go.perfectpay.com.br/PPU38COKE7C";
+    document.getElementById("btnAndroid").href = "https://go.perfectpay.com.br/PPU38COKEA9";
 });
 
 //link preço ultra
 modalBtnUltra.addEventListener("click", function () {
     openModal();
-    document.getElementById("btnApple").href = "link_para_oferta_ultra_apple";
-    document.getElementById("btnAndroid").href = "link_para_oferta_ultra_android";
+    document.getElementById("btnApple").href = "https://go.perfectpay.com.br/PPU38COKE43";
+    document.getElementById("btnAndroid").href = "https://go.perfectpay.com.br/PPU38COKE3B";
 });
 
 span.onclick = function () {
