@@ -87,18 +87,6 @@
                         atingindo um nível de excelência incomparável.</p>
                     <a href="#price" class="button desck-btn">Quero meu acesso</a>
                 </div>
-                <div class="lobby__video-container">
-                    <div class="custom-video-player">
-                        <video id="custom-video" src="/img/Coming soon Glitch video effects.mp4" playsinline
-                            controlsList="nodownload" frameborder="0" preload="auto" muted autoplay></video>
-                        <button class="play-button" id="play-button"><i class="fas fa-play"></i></button>
-                        <div id="sound-icon" style="display: block;">
-                            <i class="fa-solid fa-volume-low"></i>
-                            <span>Toque para iniciar o vídeo</span>
-                        </div>
-                        <div id="progress-bar"></div>
-                    </div>
-                </div>
                 <a href="#price" class="button mob-btn">Quero meu acesso</a>
             </div>
         </div>
@@ -278,7 +266,7 @@
             <div class="offer-container">
                 <!-- Oferta Premium -->
                 <div class="offer">
-                    <h3 class="offer-title">Premium</h3>
+                    <h3 class="offer-title">Basic</h3>
                     <p class="offer-description">
                         <i class="fas fa-check"></i> InsightShot V2: gruda a sua mira<br>
                         <i class="fas fa-check"></i> No Recoil: Aumenta sua precisão<br>
@@ -302,7 +290,8 @@
                         <span class="offer-label">POR APENAS</span>
                         <div class="new-price"><span style="font-size: 19px;">R$</span>24,97</div>
                     </div>
-                    <button class="btn-primary" id="modalBtnPremium">
+                    <button class="btn-primary" id="modalBtnPremium"
+                        onclick="document.getElementById('modalPremium').style.display='block'">
                         <span>Acessar agora</span>
                     </button>
                 </div>
@@ -327,32 +316,47 @@
                         <br>
                     </p>
                     <div class="offer-price">
-                        <div class="old-price">De R$99,97</div>
+                        <div class="old-price">De R$299,97</div>
                         <span class="offer-label">POR APENAS</span>
-                        <div class="new-price gradient"><span style="font-size: 19px;">R$</span>39,97</div>
+                        <div class="new-price gradient"><span style="font-size: 19px;">R$</span>97,00</div>
                     </div>
-                    <button class="btn-primary" id="modalBtnUltra">
+                    <button class="btn-primary" id="modalBtnUltra"
+                        onclick="document.getElementById('modalUltra').style.display='block'">
                         <span>Acessar agora</span>
                     </button>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Modal -->
-    <div id="modal" class="modal">
+    <!-- Modal Preço Premium -->
+    <div id="modalPremium" class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
+            <span class="close" onclick="document.getElementById('modalPremium').style.display='none'">&times;</span>
             <h2>Escolha seu <span class="gradient">sistema</span></h2>
             <p>Clique no seu sistema operacional e garanta sua sensi <span
-                    style="font-weight: bold; color: #f5f5f5;">AGORA MESMO!!</span>
-            </p>
-            <a href="" class="btn-modal" id="btnApple" style="padding: 15px 39px;"><i class="fab fa-apple gradient"></i>
-                <span class="system-name">Apple</span>
-            </a>
-            <a href="" class="btn-modal" id="btnAndroid" style="margin-left: 14px ;"><i
+                    style="font-weight: bold; color: #f5f5f5;">AGORA MESMO!!</span></p>
+            <a href="https://go.perfectpay.com.br/PPU38COKE7C" class="btn-modal" style="padding: 15px 39px;"><i
+                    class="fab fa-apple gradient"></i>
+                <span class="system-name">Apple</span></a>
+            <a href="https://go.perfectpay.com.br/PPU38COKEA9" class="btn-modal" style="margin-left: 14px;"><i
                     class="fab fa-android gradient"></i>
-                <span class="system-name">Android</span>
-            </a>
+                <span class="system-name">Android</span></a>
+        </div>
+    </div>
+
+    <!-- Modal Preço Ultra -->
+    <div id="modalUltra" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="document.getElementById('modalUltra').style.display='none'">&times;</span>
+            <h2>Escolha seu <span class="gradient">sistema</span></h2>
+            <p>Clique no seu sistema operacional e garanta sua sensi <span
+                    style="font-weight: bold; color: #f5f5f5;">AGORA MESMO!!</span></p>
+            <a href="https://go.perfectpay.com.br/PPU38COKE43" class="btn-modal" style="padding: 15px 39px;"><i
+                    class="fab fa-apple gradient"></i>
+                <span class="system-name">Apple</span></a>
+            <a href="https://go.perfectpay.com.br/PPU38COKE3B" class="btn-modal" style="margin-left: 14px;"><i
+                    class="fab fa-android gradient"></i>
+                <span class="system-name">Android</span></a>
         </div>
     </div>
     <!--About -->
@@ -385,7 +389,7 @@
             <div class="faq-container">
                 <div class="faq-item">
                     <h3 class="faq-question"><i class="fa-solid fa-plus"></i>Quanto custa os métodos?</h3>
-                    <p class="faq-answer">O investimento nos métodos do Pabluo é de apenas R$ 24,97 ou R$ 39,97 para o
+                    <p class="faq-answer">O investimento nos métodos do Pabluo é de apenas R$ 24,97 ou R$ 97 para o
                         Pack
                         ultra. Este é um valor acessível, considerando que você terá acesso a conhecimento premium e
                         métodos
@@ -450,7 +454,7 @@
     <script>
         // Verifica se o cookie de redirecionamento já está definido
         var redirected = document.cookie.replace(/(?:(?:^|.*;\s*)redirected\s*\=\s*([^;]*).*$)|^.*$/, "$1");
-    
+
         // Se o cookie não estiver definido e o idioma não for português, redireciona para /en
         var userLang = navigator.language || navigator.userLanguage;
         if (!redirected && !userLang.startsWith('pt')) {
@@ -459,7 +463,7 @@
             document.cookie = "redirected=true; path=/";
         }
     </script>
-                <script src="/js/script.js"></script>
+    <script src="/js/script.js"></script>
 </body>
 
 </html>
